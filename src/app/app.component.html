@@ -1,0 +1,24 @@
+<h1>
+  <!--<app-progress-bar [progress]="counterProgress"></app-progress-bar>-->
+  <app-progress-counter [count]="counterProgress"></app-progress-counter>
+   <!--<app-count2 [progress]="100 - counterProgress"></app-count2>-->
+  <app-countdown #countdown [init] = "totalCountdown" (onDecrease)="updateProgress($event)"
+   (onComplete)="countdownFinished()"></app-countdown>
+
+  <div class="initInput">
+    <label for="totalCountdown">Inicia en: </label>
+    <input type="text" name="" id="totalCountdown" [(ngModel)]="totalCountdown">
+  </div>
+
+  <button (click)="countdown.startCounter(); counterProgress=0">Reiniciar</button>
+</h1>
+
+<hr>
+<div>
+  <h1>Seleccione un Color</h1>
+  <app-componente1 (colorElejido)="vistacolor.updateTheme($event)"></app-componente1>
+</div>
+<div>
+  <h1>Visualizador de Color</h1>
+  <app-componente2 #vistacolor></app-componente2>
+</div>

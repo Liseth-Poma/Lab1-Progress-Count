@@ -1,0 +1,26 @@
+app-progress-bar{
+    width: 90%;
+  }
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .initInput{
+    display: flex;
+    input{
+      margin-left: 20px;
+      height: 40px;
+      font-size: 20px;
+      flex: 1;
+      min-width: 50px;
+    }
+  }
